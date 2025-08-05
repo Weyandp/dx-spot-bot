@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <body>
+    <h2>DX‑Spots Dashboard</h2>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <table>
+      <tr><th>Timestamp</th><th>Spot</th></tr>
+      {% for s in spots %}
+        <tr><td>{{ s.ts }}</td><td>{{ s.line }}</td></tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
